@@ -9,7 +9,7 @@ pipeline {
         }
         stage ('Scanning Image') {
             steps {
-                sh "trivy --exit-code 1 --severity HIGH --no-progress andresguisado/alpine-trivy:latest"
+                sh "trivy --exit-code 1 andresguisado/alpine-trivy:latest"
             }
         }
         stage ('Push Image') {
